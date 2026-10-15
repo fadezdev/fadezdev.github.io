@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="fadezdev — an independent developer building thoughtful mobile products, interfaces, and experiments."
+    />
+    <meta name="theme-color" content="#10110f" />
+    <meta property="og:title" content="fadezdev — Independent developer" />
+    <meta
+      property="og:description"
+      content="Thoughtful mobile products, interfaces, and experiments."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fadezdev.github.io/" />
+    <title>fadezdev — Independent developer</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("fadez-theme") ||
+        (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    </script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="fadezdev home">
+        <span class="brand-mark" aria-hidden="true">fz</span>
+        <span>fadezdev</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.4 15.2A8.5 8.5 0 0 1 8.8 3.6 8.5 8.5 0 1 0 20.4 15.2Z"></path>
+        </svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero section" id="top">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Independent developer</p>
+          <h1>I turn rough ideas into <span>software people enjoy using.</span></h1>
+          <p class="hero-intro">
+            I build mobile-first products, thoughtful interfaces, and experiments that make
+            technology feel clear, responsive, and human.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore my work</a>
+            <a
+              class="button button-quiet"
+              href="https://github.com/fadezdev"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="process-card reveal" aria-label="My product process">
+          <div class="card-topline">
+            <span>build.process</span>
+            <span class="live-label"><i></i> active</span>
+          </div>
+          <ol class="process-list">
+            <li>
+              <span>01</span>
+              <div><strong>Understand</strong><small>Find the useful core.</small></div>
+            </li>
+            <li>
+              <span>02</span>
+              <div><strong>Shape</strong><small>Make every interaction intentional.</small></div>
+            </li>
+            <li>
+              <span>03</span>
+              <div><strong>Ship</strong><small>Test, refine, and put it in people’s hands.</small></div>
+            </li>
+          </ol>
+          <div class="signal" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-heading reveal">
+          <p class="section-number">01 / About</p>
+          <h2>Curious by default.<br />Precise where it matters.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I’m <strong>fadezdev</strong>, an independent developer focused on turning early
+              concepts into useful digital products. I care about fast feedback, intuitive flows,
+              and the details that make an experience feel right.
+            </p>
+            <p>
+              My work moves from product thinking and interface design through implementation and
+              hands-on testing. The goal is always simple: build something clear enough to use and
+              solid enough to keep.
+            </p>
+          </div>
+
+          <div class="principles reveal">
+            <article>
+              <span>◆</span>
+              <h3>Useful first</h3>
+              <p>A feature earns its place by helping the person using it.</p>
+            </article>
+            <article>
+              <span>↗</span>
+              <h3>Feel matters</h3>
+              <p>Speed, sound, motion, and feedback are part of the product.</p>
+            </article>
+            <article>
+              <span>◎</span>
+              <h3>Keep refining</h3>
+              <p>Real use reveals what the first draft could never predict.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capabilities" aria-labelledby="capabilities-title">
+        <div class="section-heading reveal">
+          <p class="section-number">02 / Capabilities</p>
+          <h2 id="capabilities-title">From concept to working product.</h2>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <span class="capability-index">A</span>
+            <h3>Mobile products</h3>
+            <p>Touch-first experiences designed around the device in your hand.</p>
+          </article>
+          <article class="capability-card reveal">
+            <span class="capability-index">B</span>
+            <h3>Interaction &amp; UI</h3>
+            <p>Interfaces with clear hierarchy, useful motion, and responsive feedback.</p>
+          </article>
+          <article class="capability-card reveal">
+            <span class="capability-index">C</span>
+            <h3>Rapid prototyping</h3>
+            <p>Fast, testable builds that turn conversations into concrete decisions.</p>
+          </article>
+        </div>
+
+        <div class="stack reveal" aria-label="Current technology stack">
+          <span>React Native</span>
+          <span>Expo</span>
+          <span>TypeScript</span>
+          <span>JavaScript</span>
+          <span>GitHub</span>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="section-heading reveal">
+          <p class="section-number">03 / Work</p>
+          <h2>A public archive,<br />starting from zero.</h2>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-card-copy">
+            <p class="work-state"><span></span> Work in progress</p>
+            <h3>The first case studies are being prepared.</h3>
+            <p>
+              This profile is new. Projects, experiments, and the decisions behind them will appear
+              here as they are ready to share.
+            </p>
+          </div>
+          <a
+            class="round-link"
+            href="https://github.com/fadezdev"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit fadezdev on GitHub"
+          >
+            <span>View<br />GitHub</span>
+            <b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <p class="section-number reveal">04 / Contact</p>
+        <div class="contact-row reveal">
+          <div>
+            <h2>Have an idea worth building?</h2>
+            <p>Start the conversation on GitHub.</p>
+          </div>
+          <a
+            class="button button-primary"
+            href="https://github.com/fadezdev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Find me on GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">fz</span>fadezdev</a>
+      <p>Designed and built with care.</p>
+      <p>© <span data-year></span> fadezdev</p>
+    </footer>
+  </body>
+</html>
