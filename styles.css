@@ -531,6 +531,15 @@ h1 span {
   max-width: 650px;
 }
 
+.work-icon {
+  display: block;
+  width: 74px;
+  height: 74px;
+  margin-bottom: 28px;
+  border-radius: 20px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.28);
+}
+
 .work-state {
   display: flex;
   align-items: center;

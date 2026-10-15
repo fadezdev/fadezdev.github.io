@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pocket Orchestra is a touch-first musical playground for Android and Solana Seeker with ten playable instruments and layered performances."
+    />
+    <meta name="theme-color" content="#160e1b" />
+    <meta property="og:title" content="Pocket Orchestra" />
+    <meta
+      property="og:description"
+      content="Ten instruments. One pocket-sized stage. Built for expressive play on Android and Solana Seeker."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fadezdev.github.io/pocket-orchestra/" />
+    <meta property="og:image" content="https://fadezdev.github.io/pocket-orchestra/assets/icon.png" />
+    <title>Pocket Orchestra — A little play. A little magic.</title>
+    <link rel="icon" href="./assets/icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <svg class="instrument-sprite" aria-hidden="true">
+      <defs>
+        <symbol id="inst-drums" viewBox="0 0 120 80">
+          <ellipse cx="57" cy="55" rx="24" ry="12"/><path d="M33 55v11c0 7 48 7 48 0V55M57 43v-16M40 29h34M28 39l-14-12m72 12 14-12M10 24h25m50 0h25"/>
+          <ellipse cx="20" cy="24" rx="16" ry="4"/><ellipse cx="100" cy="24" rx="16" ry="4"/><circle cx="57" cy="54" r="8"/>
+        </symbol>
+        <symbol id="inst-piano" viewBox="0 0 120 80">
+          <rect x="9" y="18" width="102" height="48" rx="6"/><path d="M26 18v48M43 18v48M60 18v48M77 18v48M94 18v48"/>
+          <path class="solid" d="M20 18h12v27H20zm34 0h12v27H54zm17 0h12v27H71zm34 0h6v27h-6z"/>
+        </symbol>
+        <symbol id="inst-guitar" viewBox="0 0 120 80">
+          <path d="M37 60c-10-10-7-26 3-31 5-3 12 1 15-4 4-7 13-8 19-2 7 7 5 18-4 22-6 3-3 10-8 16-6 8-18 7-25-1Z"/>
+          <circle cx="56" cy="42" r="7"/><path d="M62 36 97 8m-39 31L94 10m-3-4 8 8M48 55l10-2"/>
+        </symbol>
+        <symbol id="inst-harp" viewBox="0 0 120 80">
+          <path d="M27 68 47 12h32l20 56M27 68h72M47 12l52 56"/>
+          <path d="M51 18v43M58 25v36M65 32v29M72 39v22M79 46v15M86 53v8"/>
+        </symbol>
+        <symbol id="inst-bongos" viewBox="0 0 120 80">
+          <ellipse cx="39" cy="27" rx="24" ry="9"/><path d="M15 27 22 63c2 10 32 10 34 0l7-36"/><ellipse cx="84" cy="32" rx="20" ry="8"/><path d="M64 32 69 64c2 8 28 8 30 0l5-32M60 39l7-1"/>
+        </symbol>
+        <symbol id="inst-handpan" viewBox="0 0 120 80">
+          <ellipse cx="60" cy="45" rx="49" ry="27"/><ellipse cx="60" cy="35" rx="11" ry="7"/><circle cx="37" cy="38" r="5"/><circle cx="82" cy="39" r="5"/><circle cx="47" cy="55" r="5"/><circle cx="72" cy="56" r="5"/>
+        </symbol>
+        <symbol id="inst-maracas" viewBox="0 0 120 80">
+          <path d="m39 43-20 27m58-28 20 28"/><path d="M24 61h11m50 0h11"/><ellipse cx="47" cy="30" rx="18" ry="24" transform="rotate(30 47 30)"/><ellipse cx="72" cy="29" rx="18" ry="24" transform="rotate(-30 72 29)"/>
+        </symbol>
+        <symbol id="inst-xylophone" viewBox="0 0 120 80">
+          <path d="m28 13 14 55M47 11l9 58M67 11l-1 58M87 14l-9 54M17 23h84M20 58h77"/><path d="M15 12 91 70m14-58L29 70"/><circle class="solid" cx="14" cy="12" r="5"/><circle class="solid" cx="106" cy="12" r="5"/>
+        </symbol>
+        <symbol id="inst-darbuka" viewBox="0 0 120 80">
+          <ellipse cx="60" cy="18" rx="36" ry="11"/><path d="M24 18c1 15 13 20 19 27 5 7-1 14-7 23h48c-6-9-12-16-7-23 6-7 18-12 19-27M37 68h46"/><ellipse cx="60" cy="18" rx="25" ry="7"/>
+        </symbol>
+        <symbol id="inst-trumpet" viewBox="0 0 120 80">
+          <path d="M16 44h58c8 0 14-5 14-12V22m0 22H71M19 39v10M43 25v23M55 25v23M67 25v23M39 25h8m4 0h8m4 0h8"/><path d="M84 30 111 18v36L84 42Z"/><circle cx="14" cy="44" r="5"/>
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="./" aria-label="Pocket Orchestra home">
+        <img src="./assets/icon.png" alt="" />
+        <span>Pocket Orchestra</span>
+      </a>
+      <nav aria-label="Pocket Orchestra navigation">
+        <a href="#instruments">Instruments</a>
+        <a href="#recording">My Plays</a>
+        <a href="#about">About</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+      </nav>
+      <a class="developer-link" href="../">fadezdev <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="curtain curtain-left" aria-hidden="true"></div>
+        <div class="curtain curtain-right" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">A little play. A little magic.</p>
+          <h1>A whole orchestra.<br /><span>Right in your pocket.</span></h1>
+          <p class="hero-intro">
+            Pocket Orchestra turns your phone into a collection of expressive musical instruments.
+            Tap, sweep, slide, strum, and shake your way into a song—no lessons required.
+          </p>
+          <div class="platform-note" aria-label="Platform information">
+            <span>Android</span>
+            <i></i>
+            <span>Solana Seeker</span>
+            <i></i>
+            <span>In development</span>
+          </div>
+        </div>
+
+        <div class="hero-art reveal" aria-label="Pocket Orchestra icon on a miniature theater stage">
+          <div class="stage-orbit orbit-one"></div>
+          <div class="stage-orbit orbit-two"></div>
+          <img src="./assets/icon.png" alt="Pocket Orchestra pocket theater app icon" />
+          <div class="floating-note note-one" aria-hidden="true">♪</div>
+          <div class="floating-note note-two" aria-hidden="true">♫</div>
+        </div>
+      </section>
+
+      <section class="promise section" id="about">
+        <div class="section-label reveal">The idea</div>
+        <div class="promise-copy reveal">
+          <h2>Music made for curious hands.</h2>
+          <p>
+            Every instrument uses a mechanic that feels natural on a phone. Drums welcome both
+            hands. Piano keys respond to gliding fingers. Guitar strings can be fretted and strummed.
+            Maracas respond when the phone moves. The screen becomes the instrument.
+          </p>
+        </div>
+        <div class="promise-points reveal">
+          <article><strong>10</strong><span>distinct instruments</span></article>
+          <article><strong>Real</strong><span>recorded acoustic sounds</span></article>
+          <article><strong>Offline</strong><span>once installed</span></article>
+        </div>
+      </section>
+
+      <section class="instruments section" id="instruments">
+        <div class="section-heading reveal">
+          <p class="section-label">Meet the orchestra</p>
+          <h2>Ten instruments.<br />Ten ways to move.</h2>
+          <p>Each one is designed around the gesture that makes it enjoyable on a phone.</p>
+        </div>
+
+        <div class="instrument-grid">
+          <article class="instrument-card drums reveal"><span>01</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-drums" /></svg><h3>Drums</h3><p>Play the full kit with simultaneous fingers and rapid repeated hits.</p><b>Tap · Multi-touch</b></article>
+          <article class="instrument-card piano reveal"><span>02</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-piano" /></svg><h3>Piano</h3><p>Move across 37 keys, play chords, and glide smoothly between notes.</p><b>Tap · Chord · Glide</b></article>
+          <article class="instrument-card guitar reveal"><span>03</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-guitar" /></svg><h3>Guitar</h3><p>Choose chords or fret individual strings, then pluck and strum.</p><b>Fret · Pluck · Strum</b></article>
+          <article class="instrument-card harp reveal"><span>04</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-harp" /></svg><h3>Harp</h3><p>Sweep eight strings in either direction and let every note ring.</p><b>Pluck · Sweep</b></article>
+          <article class="instrument-card bongos reveal"><span>05</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-bongos" /></svg><h3>Bongos</h3><p>Use both thumbs for open centre tones and muted edge hits.</p><b>Centre · Edge</b></article>
+          <article class="instrument-card handpan reveal"><span>06</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-handpan" /></svg><h3>Handpan</h3><p>Explore seven resonant tones arranged around a deep centre note.</p><b>Tap · Ring</b></article>
+          <article class="instrument-card maracas reveal"><span>07</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-maracas" /></svg><h3>Maracas</h3><p>Shake the phone and let direction, speed, and strength shape the rhythm.</p><b>Shake · Move</b></article>
+          <article class="instrument-card xylophone reveal"><span>08</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-xylophone" /></svg><h3>Xylophone</h3><p>Control two mallets independently or tap thirteen chromatic bars directly.</p><b>Tap · Drag mallets</b></article>
+          <article class="instrument-card darbuka reveal"><span>09</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-darbuka" /></svg><h3>Darbuka</h3><p>Move around one Arabic goblet drum for Doum, Ka, Tek, and Slap.</p><b>Centre · Rim · Roll</b></article>
+          <article class="instrument-card trumpet reveal"><span>10</span><svg class="instrument-art" aria-hidden="true"><use href="#inst-trumpet" /></svg><h3>Trumpet</h3><p>Hold the breath control and change notes with three responsive valves.</p><b>Hold · Press valves</b></article>
+        </div>
+      </section>
+
+      <section class="recording section" id="recording">
+        <div class="recording-console reveal" aria-hidden="true">
+          <div class="console-top"><span>MY PLAYS</span><i></i><i></i><i></i></div>
+          <div class="track coral"><b>DRUMS 1</b><span></span><em>00:12</em></div>
+          <div class="track gold"><b>GUITAR 1</b><span></span><em>00:18</em></div>
+          <div class="track teal"><b>ORCHESTRA 1</b><span></span><em>00:24</em></div>
+          <div class="console-line"></div>
+          <div class="console-controls"><span>●</span><span>▶</span><span>▣</span></div>
+        </div>
+        <div class="recording-copy reveal">
+          <p class="section-label">My Plays</p>
+          <h2>Build it one part at a time.</h2>
+          <p>
+            Record a performance, save it, then bring it into another instrument as playback. Add
+            the next part on top and shape a multi-instrument arrangement at your own pace.
+          </p>
+          <ul>
+            <li>Save performances by instrument</li>
+            <li>Combine multiple instruments into orchestra recordings</li>
+            <li>Choose one-time or looping playback</li>
+            <li>Set the pause between loops</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="principles section">
+        <div class="section-heading reveal">
+          <p class="section-label">Built around play</p>
+          <h2>Simple to start.<br />Deep enough to explore.</h2>
+        </div>
+        <div class="principle-grid">
+          <article class="reveal"><span>01</span><h3>No account</h3><p>Open an instrument and begin. Pocket Orchestra does not require a login or wallet.</p></article>
+          <article class="reveal"><span>02</span><h3>Made for touch</h3><p>Multi-touch and continuous gestures keep fast playing responsive and expressive.</p></article>
+          <article class="reveal"><span>03</span><h3>Acoustic character</h3><p>Carefully prepared recordings give every instrument its own natural voice.</p></article>
+          <article class="reveal"><span>04</span><h3>Your music stays local</h3><p>Saved plays and settings remain in the app’s storage on your device.</p></article>
+        </div>
+      </section>
+
+      <section class="status section">
+        <div class="status-inner reveal">
+          <img src="./assets/icon.png" alt="" />
+          <div>
+            <p class="section-label">Development status</p>
+            <h2>Preparing for the Solana dApp Store.</h2>
+            <p>Pocket Orchestra is being developed for Android, with Solana Seeker as its primary device.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><img src="./assets/icon.png" alt="" /><span>Pocket Orchestra</span></div>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms &amp; Conditions</a>
+        <a href="../">Developer website</a>
+      </div>
+      <p>© <span data-year></span> fadezdev</p>
+    </footer>
+  </body>
+</html>
