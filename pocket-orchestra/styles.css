@@ -143,7 +143,7 @@ h1 span { color: var(--coral); }
 .section-heading { display: grid; grid-template-columns: 0.45fr 1fr; gap: 50px; margin-bottom: 70px; }
 .section-heading h2 { grid-column: 2; }
 .section-heading > p:last-child { grid-column: 2; max-width: 620px; margin: -25px 0 0; color: var(--muted); }
-.instrument-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.instrument-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .instrument-card { position: relative; display: flex; min-height: 310px; padding: 23px; flex-direction: column; overflow: hidden; border: 1px solid var(--border); border-radius: 22px; background: var(--raised); transition: transform 180ms ease, border-color 180ms ease; }
 .instrument-card::after { position: absolute; right: -35px; bottom: -45px; width: 120px; height: 120px; border-radius: 50%; background: var(--card-accent); content: ""; filter: blur(45px); opacity: 0.23; }
 .instrument-card:hover { border-color: var(--card-accent); transform: translateY(-5px); }
@@ -153,7 +153,7 @@ h1 span { color: var(--coral); }
 .instrument-card h3 { margin: 2px 0 10px; font-size: 1.4rem; letter-spacing: -0.04em; }
 .instrument-card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 .instrument-card b { z-index: 1; margin-top: auto; padding-top: 25px; color: var(--card-accent); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
-.drums { --card-accent: #ff7b76; } .piano { --card-accent: #75c5e8; } .guitar { --card-accent: #f0b94a; } .harp { --card-accent: #dba9ff; } .bongos { --card-accent: #d9976d; } .handpan { --card-accent: #4eb7ae; } .maracas { --card-accent: #ff6f82; } .xylophone { --card-accent: #f3a34f; } .darbuka { --card-accent: #75c7c1; } .trumpet { --card-accent: #f5d36c; }
+.drums { --card-accent: #ff7b76; } .piano { --card-accent: #75c5e8; } .guitar { --card-accent: #f0b94a; } .harp { --card-accent: #dba9ff; } .bongos { --card-accent: #d9976d; } .handpan { --card-accent: #4eb7ae; } .xylophone { --card-accent: #f3a34f; } .darbuka { --card-accent: #75c7c1; } .trumpet { --card-accent: #f5d36c; }
 
 .recording { display: grid; grid-template-columns: 1fr 0.85fr; gap: clamp(55px, 9vw, 130px); align-items: center; }
 .recording-console { padding: 24px; border: 1px solid var(--border); border-radius: 28px; background: linear-gradient(145deg, var(--soft), var(--raised)); box-shadow: 0 35px 80px rgba(0,0,0,.35); transform: rotate(-1.5deg); }
