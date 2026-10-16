@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pocketorchestra.app",
+      "sha256_cert_fingerprints": [
+        "53:10:E2:40:9D:3C:22:52:E3:5D:99:6C:BB:15:B4:9D:F5:AE:DF:C3:1F:D5:C1:3B:72:70:2B:6D:5D:2E:64:67"
+      ]
+    }
+  }
+]
